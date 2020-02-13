@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<error-page>
+		<error-code>404</error-code>
+		<location>/trang-admin/khongtimthaytrang.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/fail.jsp</location>
+	</error-page>
+	
+	<display-name>Gunpla-Shop</display-name>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>DangNhapQuanTriVienServlet</display-name>
+		<servlet-name>DangNhapQuanTriVienServlet</servlet-name>
+		<servlet-class>controller.DangNhapQuanTriVienServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>DangXuatQuanTriVienServlet</display-name>
+		<servlet-name>DangXuatQuanTriVienServlet</servlet-name>
+		<servlet-class>controller.DangXuatQuanTriVienServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DangNhapQuanTriVienServlet</servlet-name>
+		<url-pattern>/trang-admin/DangNhapQuanTriVienServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DangXuatQuanTriVienServlet</servlet-name>
+		<url-pattern>/trang-admin/DangXuatQuanTriVienServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
